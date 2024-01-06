@@ -1,1 +1,1 @@
-# soldeck-web
+# soldeck
