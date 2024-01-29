@@ -247,16 +247,24 @@ const TokenBalanceSummaryRecordsTable = ({
             ) : null;
 
             return (
-              <span className="inline-block ">
-                <div className="inline-block" style={{ width: 40, height: 40 }}>
-                  {tokenIcon}
-                </div>
-                <span className="inline-block w-4"></span>
-                <div className="inline-block">
-                  <div>{record.tokenInfo?.name}</div>
-                  <div>{record.tokenInfo?.symbol}</div>
-                </div>
-              </span>
+              <div className="inline-flex">
+                <a
+                  href={`https://birdeye.so/token/${record.tokenAddress}?chain=solana`}
+                  target="_blank"
+                >
+                  <div
+                    className="inline-flex"
+                    style={{ width: 40, height: 40, alignItems: "center" }}
+                  >
+                    {tokenIcon}
+                  </div>
+                  <span className="inline-block w-4"></span>
+                  <div className="inline-block">
+                    <div>{record.tokenInfo?.name}</div>
+                    <div>{record.tokenInfo?.symbol}</div>
+                  </div>
+                </a>
+              </div>
             );
           }}
           // sorter={(
